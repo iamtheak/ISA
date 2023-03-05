@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <style>
+        body{
+            background-color: #f7567c;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .content-wrapper{
+            padding: 2%;
+            text-align: left;
+            max-width: 70vh;
+            min-height: 70vh;
+            background-color: #99e1d9;
+        }
+        input{
+            margin: 2px;
+        }
+        label{
+            display: block;
+            margin: 2px;
+            padding: 2px;
+        }
+        .checkbox > label{
+            display: block;
+        }
+        .radios > label,
+        .checkbox > label{
+            display: inline-block;
+        }
+        button{
+            display: block;
+            width: 100%;
+            height: 40px;
+            margin-top: 35px;
+            background-color: aquamarine;
+        }
+        input[type="text"],
+        input[type="email"]{
+            width: 96%;
+        }
+        input[type="textarea"]{
+            margin-bottom: 10px;
+            padding: 2px;
+            width: 97%;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Herald College Kathmandu Survey Form
+    </h1>
+    <div class="content-wrapper">
+        <form action="">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
+            <label >email</label>
+            <input type="email" placeholder="Enter your email">
+            <label >Age</label>
+            <input type="text" placeholder="Enter your age">
+            <label>Which option best decribes you</label>
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="Intern">Intern</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Alumni">Alumni</option>
+            </select>
+            <p>
+                Would you recommend herald college kathmandu to a friend?
+            </p>
+            <div class="radios">
+                <input type="radio" value="yes" name="recomend"><label>Yes</label>
+            <br>
+            <input type="radio" value="no" name="recomend"><label for="">No</label><br>
+            <input type="radio" value="maybe" name="recomend"><label for="">Maybe</label>
+            </div>
+            <div class="checkbox">
+                <p>Languages and frameworks known (Check all that apply) </p>
+            <input type="checkbox" value="c"> 
+            <label> C </label>
+            <br>
+            <input type="checkbox" value="c++">
+            <label> C++ </label>
+            <br>
+            <input type="checkbox" value="c#">
+            <label> C# </label>
+            <br>
+            <input type="checkbox" value="Java">
+            <label> Java </label>
+            <br>
+            <input type="checkbox" value="Python">
+            <label>Python</label>
+            <br>
+            <input type="checkbox" value="Javascript">
+            <label>JavaScript</label>
+            <br>
+            <input type="checkbox" value="React">
+            <label> React </label>
+            <br>
+            <input type="checkbox" value="Angular">
+            <label> Angular </label>
+            <br>
+            <input type="checkbox" value="Django">
+            <label>Django</label>
+            <br>
+            <input type="checkbox" value="Spring">
+            <label>Spring</label>
+        </div>
+            <label for="">Any comments or suggestions</label>
+            <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
+            <button type="submit">Submit</button>
+        </form> 
+    </div>
+</body>
+</html>
