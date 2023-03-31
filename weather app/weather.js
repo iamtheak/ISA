@@ -51,7 +51,7 @@ setInterval(theClock,1000)
 //The weather function to run the weather app
 function getWeather(cityname){
     //fetching the api promise
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&units=metric&appid=9c8d6178332aa2f80627839ef3688aa0`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&units=metric&appid=${Apikey}`)
     .then(res => res.json())
     .then((data) =>{
 
