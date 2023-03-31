@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Rating</title>
+</head>
+<body>
+    <form action="" class="serach">
+        <input type="text" name="" id="search">
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <div class="work">
+        
+    </div>
+    <script>
+        const searchbar = document.querySelector("#search");
+        const work = document.querySelector(".work");
+        const button = document.getElementById("submit");
+
+        function getRating(moviename){
+            fetch(`https://www.omdbapi.com/?t=${moviename}&apikey=b4cdfba7`)
+            .then(resp => resp.json())
+            .then(data => {
+                let h1 = document.createElement('h1')
+                h1.innerHTML = moviename
+                work.appendChild(h1)
+                let ratings = data.Ratings
+                console.log(ratings)
+                ratings.forEach(element => {
+                    work.innerHTML += `The Source ${element.Source} the rating ${element.Value} <br>`
+                });
+            }).catch(error => alert("The movie doesnt exist"))
+        }
+        getRating("Avatar")
+        button.addEventListener('click',(element)=>{
+            work.innerHTML = " "
+            
+            element.preventDefault()
+            getRating(searchbar.value)
+            searchbar.value = " "
+        })
+    </script>
+</body>
+</html>

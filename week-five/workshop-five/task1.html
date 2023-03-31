@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <form action="" class="serach">
+        <input type="text" name="" id="search">
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <div class="work">
+        
+    </div>
+    <script>
+        const searchbar = document.querySelector("#search");
+        const work = document.querySelector(".work");
+        const button = document.getElementById("submit");
+        let username = "iamtheak"
+        function getRepos(username){
+            let h1 = document.createElement('h1')
+                h1.innerHTML = username
+                work.appendChild(h1)
+            fetch(`https://api.github.com/users/${username}/repos`)
+            .then(resp => resp.json())
+            .then(data => data.forEach((element,index) => {
+              work.innerHTML += `${index+1} ${element.name} <br>`
+            }))
+            .catch(error => alert("The Github username Doesnt Exist"))
+        }
+        getRepos(username)
+        button.addEventListener('click',(element)=>{
+            work.innerHTML = " "
+            
+            element.preventDefault()
+            getRepos(searchbar.value)
+            searchbar.value = " "
+        })
+    </script>
+</body>
+</html>

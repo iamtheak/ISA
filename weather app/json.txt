@@ -1,0 +1,53 @@
+base
+: 
+"stations"
+clouds
+: 
+{all: 20}
+cod
+: 
+200
+coord
+: 
+{lon: 85.3167, lat: 27.7167}
+dt
+: 
+1679886171
+id
+: 
+1283240
+main
+: 
+{temp: 16.12, feels_like: 15.22, temp_min: 16.12, temp_max: 16.12, pressure: 1016, …}
+name
+: 
+"Kathmandu"
+sys
+: 
+{type: 1, id: 9201, country: 'NP', sunrise: 1679876126, sunset: 1679920378}
+timezone
+: 
+20700
+visibility
+: 
+6000
+weather
+: 
+Array(1)
+0
+: 
+{id: 801, main: 'Clouds', description: 'few clouds', icon: '02d'}
+length
+: 
+1
+[[Prototype]]
+: 
+Array(0)
+wind
+: 
+deg
+: 
+0
+speed
+: 
+1.03

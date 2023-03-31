@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your weather</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Ak's Weather App
+            </div>
+            <form class="searchbar">
+                
+                <input type="text" placeholder="Search Your city" id="searchbar">
+                <i class="fa fa-search" aria-hidden="true" id="submit" type="submit"></i>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+        <div class="clock">
+           <div class="dateDisplay">
+            <span id="day"></span>
+            <span id="month"></span>
+            <span id="date"></span>
+            <span id="year"></span>
+           </div>
+           <div class="timeDisplay">
+            <span id="hour"></span>
+            <span id="min"></span>
+            <span id="sec"></span>
+            <span id="me"></span>
+           </div>
+        </div>
+        <div class="weather-box">
+            <h1 class="city">
+
+            </h1>
+            <h2 class="weather-overview">
+    
+            </h2>
+            <div class="weather-icon">
+    
+            </div>
+            <div class="temperature">
+    
+            </div>
+            <p class="humidity">
+    
+            </p>
+            <p class="windspeed">
+    
+            </p>
+            <p class="rainfall">
+    
+            </p>
+        </div>
+    </div>
+    </main>
+        <script src="weather.js"></script>
+        <script src="https://kit.fontawesome.com/6fe7afc2f2.js" crossorigin="anonymous"></script>
+</body>
+</html>
